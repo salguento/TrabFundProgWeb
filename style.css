@@ -1,0 +1,278 @@
+/* Previnir o padding de quebrar o width de elementos */
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #030712;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f8fafc;
+  line-height: 100%;
+}
+
+h2,
+h3,
+p,
+li {
+  margin: 0;
+  font-family: sans-serif;
+  color: #e2e8f0;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.body-container {
+  max-width: 800px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Definições de estilo da navbar */
+nav {
+  width: 100%;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  backdrop-filter: blur(6px);
+  width: fit-content;
+  padding: 20px 12px;
+  border-radius: 32px;
+}
+
+.navbar-link a {
+  color: #94a3b8;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 8px 16px;
+  border-radius: 24px;
+  text-decoration: none;
+}
+
+.navbar-link a:hover {
+  border: 1px solid #e2e8f0;
+  color: #e2e8f0;
+}
+
+.navbar-link a.active {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+/* Definições de área de conteúdo */
+.content-wrapper {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 512px;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* Definições de estilo para Home e About */
+#home,
+#about {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#home img,
+#about img {
+  max-width: 45%;
+  border-radius: 12px;
+}
+
+#home h1,
+#about h1 {
+  text-align: left;
+}
+
+#home div,
+#about div {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  gap: 16px;
+}
+
+/* Definições de estilo para cards de portfólio */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 45%;
+  height: 100%;
+}
+
+.card h3,
+.card p,
+.card ul {
+  margin: 0;
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+  max-height: 256px;
+  object-fit: cover;
+}
+
+.card-info {
+  position: relative;
+  padding: 16px 16px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-info div {
+  width: 100%;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0;
+  list-style-type: none;
+  white-space: nowrap;
+}
+
+.stack li {
+  padding: 4px 12px;
+  font-size: smaller;
+  font-weight: 600;
+  border: 1px solid #0891b2;
+  color: #0891b2;
+  border-radius: 24px;
+}
+
+.link-site {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.link-site a {
+  border: 1px solid #0891b2;
+  color: white;
+  padding: 4px 16px;
+  border-radius: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-site a:hover {
+  background-color: #0891b2;
+}
+/* Definições de estilo para sessão de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  color: #e5e7eb;
+  font-family: sans-serif;
+  font-size: smaller;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+input,
+textarea {
+  padding: 8px 8px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: sans-serif;
+  font-size: small;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #06b6d4;
+}
+
+.input-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-btn button {
+  background-color: #0891b2;
+  width: 100%;
+  border: none;
+  padding: 4px 16px;
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.input-btn button:hover {
+  background-color: white;
+  color: #0891b2;
+}
